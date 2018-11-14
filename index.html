@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<title>My A-Frame Scene</title>
-	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-	<script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
-	<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-	<script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-	<script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+	<title>Three.js and AR.js - examples</title>
+	<link rel=stylesheet href="css/index.css" />
 </head>
 
 <body>
-	<a-scene>
-		<a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
 
-		<a-entity id="sphere" geometry="primitive: sphere" material="color: #EFEFEF; shader: flat" position="0 0.15 -5" light="type: point; intensity: 5"
-		 animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 -0.10 -5; loop: true"></a-entity>
+	<div class="bigTitle">Three.js and AR.js Examples</div>
+	<hr>
+	The goal of this collection is to provide a set of basic and instructive examples that introduce the various features
+	in the Javascript-based Augmented Reality (AR) library,
+	<a class="toc" href="https://github.com/jeromeetienne/AR.js">AR.js</a>. Advanced <a class="toc" href="https://threejs.org/">three.js</a>
+	examples are also included.
 
-		<a-entity id="ocean" ocean="density: 20; width: 50; depth: 50; speed: 4" material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1"
-		 rotation="-90 0 0"></a-entity>
+	<br /><br />
+	Source code hosted at <a class="toc" href="https://github.com/stemkoski/AR-Examples">GitHub</a>.
 
-		<a-entity id="sky" geometry="primitive: sphere; radius: 5000" material="shader: gradient; topColor: 235 235 245; bottomColor: 185 185 210"
-		 scale="-1 1 1"></a-entity>
+	<hr />
 
-		<a-entity id="light" light="type: ambient; color: #888"></a-entity>
-	</a-scene>
+	<div class="fancy">
+		<a href="hello-cube.html">
+			<img src="images/demo/hello-cube.png" class="superImage" />
+			<br />Basic Cube</a>
+		<p class="superText">A basic scene that superimposes a cube on a Hiro marker.
+		</p>
+	</div>
+
+
+
+
 </body>
 
 </html>
