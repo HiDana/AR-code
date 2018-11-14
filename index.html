@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>My A-Frame Scene</title>
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+			<a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite" to="0 2.2 -5"></a-animation>
+			<a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+			<a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+			<a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+			<!-- <a-entity geometry="primitive: sphere; radius: 1.5" material="color: tomato; metalness: 0.7"></a-entity>
+			<a-entity light="type: ambient; color: #BBB"></a-entity> -->
+		</a-box>
+
+		<a-entity position="0 0 5">
+			<a-camera></a-camera>
+		</a-entity>
+
+		<a-sky color="#aaa"></a-sky>
+	</a-scene>
+</body>
+
+</html>
